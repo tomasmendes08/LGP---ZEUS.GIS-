@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;500&display=swap');
+
+body {
+    height: 100vh;
+}
+
+.App {
+    font-family: 'Kanit', sans-serif;
+}
+
+.navLinks {
+
+}
+
+#root {
+    height: 100vh;
+}
+
+.App {
+    height: 100vh;
+}
+
+.companyPresentation{
+    overflow-y: hidden;
+    background-image: url("../public/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.aboutPageHeader{
+    height: 40vh;
+    background-color: #016938;
+    opacity: 0.9;
+}
+
+.aboutPageHeaderText h5{
+    line-height: 1.3;
+}

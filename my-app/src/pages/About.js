@@ -1,6 +1,7 @@
 import React from 'react'
 import NavbarComponent from '../components/Navbar'
 import { BiTargetLock } from 'react-icons/bi';
+import { RiTeamFill } from 'react-icons/ri';
 
 function AboutPage() {
   return (
@@ -9,7 +10,7 @@ function AboutPage() {
     <div className="aboutPage row">
       <div class="col-lg-6 aboutPageHeader d-flex flex-column justify-content-center align-items-center">
         <div class="aboutPageIcon">
-          <BiTargetLock size={70}/>
+          <RiTeamFill size={70} color="white"/>
         </div>
         <div class="aboutPageHeaderTitle">
           <h1 class="fw-bold text-white">Who we are.</h1>

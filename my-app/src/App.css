@@ -39,3 +39,20 @@ body {
 .aboutPageHeaderText h5{
     line-height: 1.3;
 }
+
+@media screen and (min-width: 992px) {
+    .mainGoalIcon{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ourClientLogo img{
+        width: 7rem;
+    }
+}
+
+.contactPageContainer{
+    background-color: #016938;
+}
+

@@ -10,7 +10,7 @@ function Mainpage(){
                         Empowering the energy industry.
                     </div>
                     <div className = "d-flex justify-content-start mt-3">
-                        <button type="button" className="btn btn-success w-lg-25 p-3 fs-5">Get in Touch</button>
+                        <a href="/contact" class="btn btn-success w-lg-25 p-3 fs-5">Get in Touch</a>
                     </div>
                 </div>
             </div>

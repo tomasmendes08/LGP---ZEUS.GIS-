@@ -3,9 +3,9 @@ import {Navbar, Nav, Container} from 'react-bootstrap'
 
 function NavbarComponent() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light">
+    <Navbar className="navbarZeus position-fixed w-100" collapseOnSelect expand="lg" bg="light">
       <Container className="col-12">
-      <Navbar.Brand href="/" className="col-1">
+      <Navbar.Brand href="/" className="col-2">
         <img src="./images/logo192.png" alt="ZEUS.GIS" width='140' height='22'></img>
       </Navbar.Brand> 
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />

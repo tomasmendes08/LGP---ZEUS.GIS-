@@ -8,6 +8,9 @@ function AboutPage() {
     <NavbarComponent/>
     <div className="aboutPage row">
       <div class="col-lg-6 aboutPageHeader d-flex flex-column justify-content-center align-items-center">
+        <div class="aboutPageIcon">
+          <BiTargetLock size={70}/>
+        </div>
         <div class="aboutPageHeaderTitle">
           <h1 class="fw-bold text-white">Who we are.</h1>
         </div>
@@ -50,11 +53,11 @@ function AboutPage() {
         <div class="ourClientLogo">
           <img class="img-fluid" src="../images/client.jpg" alt="Client"></img>
         </div>
-        <div class="ourClientText mt-3 container">
-          <h6 class="text-center">
+        <div class="ourClientText mt-3 mb-4 container">
+          <h5 class="text-center">
             On a mission to unlock the potential of artificial intelligence for the benefit
             of humans and humanity, by building 'machines of assistance'.
-          </h6> 
+          </h5> 
         </div>
       </div>
     </div>

@@ -41,6 +41,12 @@ body {
 }
 
 @media screen and (min-width: 992px) {
+    .aboutPageIcon{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
     .mainGoalIcon{
         display: none;
     }
@@ -55,5 +61,23 @@ body {
 .contactPageContainer{
     background-color: #016938;
     border-radius: 10px;
+}
+
+.productsPage{
+    background-image: url("../public/images/blurred2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.navbarZeus {
+    min-height: 60px;
+    z-index: 9999;
+}
+
+.navbarZeus + div {
+    padding-top: 60px;
 }
 

@@ -1,14 +1,29 @@
 import React from 'react'
 import NavbarComponent from '../components/Navbar'
-import { BiTargetLock } from 'react-icons/bi';
 
 function ContactPage() {
   return (
     <>
     <NavbarComponent/>
     <div className="contactPage">
-        <div class="contactPageHeader d-flex justify-content-center align-items-center">
-            <h1 class="fw-bold text-white mt-3">Contact Us</h1>
+        <div class="contactPageHeader d-flex flex-column justify-content-center align-items-center">
+            <div class="contactPageHeaderTitle ">
+                <h1 class="fw-bold text-white mt-3">Contact Us</h1>
+            </div>
+            <div class="contactPageTeamInfo row mt-4">
+                <div class="contactPageTeamInfoLocation col-md-6">
+                    <h4 class="text-white">Location</h4>
+                    <p class="text-white">
+                        FEUP, B332
+                    </p>
+                </div>
+                <div class="contactPageTeamInfoEmail col-md-6">
+                    <h4 class="text-white">Email</h4>
+                    <p class="text-white">
+                        zeus.gis@outlook.com
+                    </p>
+                </div>
+            </div>
         </div>
         
         <div class="contactPageInfo mt-4">

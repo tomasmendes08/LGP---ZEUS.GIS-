@@ -1,7 +1,40 @@
 import React from 'react'
 import NavbarComponent from '../components/Navbar'
+import { send } from 'emailjs-com';
+
 
 function ContactPage() {
+  function sendMail(params) {
+    send("service_zeus.gis","template_e1kbzlh", params, "I8-Gx5hL0KRllxSQp")
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        window.location.href = "/?contact=true";
+    }, function(error) {
+        console.log('FAILED...', error);
+        window.location.reload();
+    });
+  }
+
+  function onSubmit(event) {
+    event.preventDefault()
+
+    const from_name = document.querySelector("#inputName").value
+    const from_email = document.querySelector("#inputEmail").value
+    const phone = document.querySelector("#inputPhone").value || "No phone"
+    const subject = document.querySelector("#inputSubject").value
+    const message = document.querySelector("#inputTextarea").value
+
+    const params = {
+      from_name,
+      from_email,
+      phone,
+      subject,
+      message
+    }
+
+    sendMail(params)
+  }
+
   return (
     <>
     <NavbarComponent/>
@@ -27,38 +60,38 @@ function ContactPage() {
         </div>
         
         <div class="contactPageInfo mt-4">
-            <form class="contactPageForm container">
+            <form class="contactPageForm container" onSubmit={onSubmit}>
                 <div class="mb-3 container row">
                     <div class="col-md-6 col-12 mb-3">
                         <div class="d-flex">
-                            <label for="inputName" class="form-label text-dark">Name</label><div class="text-danger">*</div>
+                            <label htmlFor="inputName" class="form-label text-dark">Name</label><div class="text-danger">*</div>
                         </div>
-                        <input type="text" class="form-control" id="inputName" placeholder="Enter your name" required/>
+                        <input type="text" class="form-control" id="inputName" name="from_name" placeholder="Enter your name" required/>
                     </div>
                     <div class="col-md-6 col-12">
                         <div class="d-flex">
-                            <label for="inputEmail" class="form-label text-dark">Email</label><div class="text-danger">*</div>
+                            <label htmlFor="inputEmail" class="form-label text-dark">Email</label><div class="text-danger">*</div>
                         </div>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Enter your email" required/>
+                        <input type="email" class="form-control" id="inputEmail" name="from_email" placeholder="Enter your email" required/>
                     </div>
                 </div>
                 <div class="mb-3 container row">
                     <div class="col-md-6 col-12 mb-3">
-                        <label for="inputPhone" class="form-label text-dark">Phone</label>
-                        <input type="tel" class="form-control" id="inputPhone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="Enter your phone number"></input>
+                        <label htmlFor="inputPhone" class="form-label text-dark">Phone</label>
+                        <input type="tel" class="form-control" id="inputPhone" name="phone" placeholder="Enter your phone number"></input>
                     </div>
                     <div class="col-md-6 col-12">
                         <div class="d-flex">
-                            <label for="inputSubject" class="form-label text-dark">Subject</label><div class="text-danger">*</div>
+                            <label htmlFor="inputSubject" class="form-label text-dark">Subject</label><div class="text-danger">*</div>
                         </div>
-                        <input type="text" class="form-control" id="inputSubject" placeholder="Main topic of your message" required/>
+                        <input type="text" class="form-control" id="inputSubject" name="subject" placeholder="Main topic of your message" required/>
                     </div>
                 </div>
                 <div class="mb-4 container row">
                     <div class="d-flex">
-                        <label for="inputTextarea" class="form-label text-dark">Message</label><div class="text-danger">*</div>
+                        <label htmlFor="inputTextarea" class="form-label text-dark">Message</label><div class="text-danger">*</div>
                     </div>
-                    <textarea class="form-control" id="inputTextarea" rows="5" required></textarea>
+                    <textarea class="form-control" id="inputTextarea" rows="5" name="message" required></textarea>
                 </div>
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-outline-success mb-3">Submit</button>

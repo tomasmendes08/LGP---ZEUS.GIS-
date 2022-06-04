@@ -1,6 +1,7 @@
 import React from 'react'
 import NavbarComponent from '../components/Navbar'
 import { send } from 'emailjs-com';
+import { Spinner } from 'react-bootstrap';
 
 
 function ContactPage() {
@@ -17,6 +18,13 @@ function ContactPage() {
 
   function onSubmit(event) {
     event.preventDefault()
+
+    const submitButton = document.querySelector(".submitButton");
+
+    submitButton.insertAdjacentHTML(
+        'beforeend',
+        <Spinner class="loadingAfterSubmit ms-2" animation="border" variant="success" role="status"></Spinner>,
+    );
 
     const from_name = document.querySelector("#inputName").value
     const from_email = document.querySelector("#inputEmail").value
@@ -66,35 +74,36 @@ function ContactPage() {
                         <div class="d-flex">
                             <label htmlFor="inputName" class="form-label text-dark">Name</label><div class="text-danger">*</div>
                         </div>
-                        <input type="text" class="form-control" id="inputName" name="from_name" placeholder="Enter your name" required/>
+                        <input type="text" class="form-control border-dark" id="inputName" name="from_name" placeholder="Enter your name" required/>
                     </div>
                     <div class="col-md-6 col-12">
                         <div class="d-flex">
                             <label htmlFor="inputEmail" class="form-label text-dark">Email</label><div class="text-danger">*</div>
                         </div>
-                        <input type="email" class="form-control" id="inputEmail" name="from_email" placeholder="Enter your email" required/>
+                        <input type="email" class="form-control border-dark" id="inputEmail" name="from_email" placeholder="Enter your email" required/>
                     </div>
                 </div>
                 <div class="mb-3 container row">
                     <div class="col-md-6 col-12 mb-3">
                         <label htmlFor="inputPhone" class="form-label text-dark">Phone</label>
-                        <input type="tel" class="form-control" id="inputPhone" name="phone" placeholder="Enter your phone number"></input>
+                        <input type="tel" class="form-control border-dark" id="inputPhone" name="phone" placeholder="Enter your phone number"></input>
                     </div>
                     <div class="col-md-6 col-12">
                         <div class="d-flex">
                             <label htmlFor="inputSubject" class="form-label text-dark">Subject</label><div class="text-danger">*</div>
                         </div>
-                        <input type="text" class="form-control" id="inputSubject" name="subject" placeholder="Main topic of your message" required/>
+                        <input type="text" class="form-control border-dark" id="inputSubject" name="subject" placeholder="Main topic of your message" required/>
                     </div>
                 </div>
                 <div class="mb-4 container row">
                     <div class="d-flex">
                         <label htmlFor="inputTextarea" class="form-label text-dark">Message</label><div class="text-danger">*</div>
                     </div>
-                    <textarea class="form-control" id="inputTextarea" rows="5" name="message" required></textarea>
+                    <textarea class="form-control border-dark" id="inputTextarea" rows="5" name="message" required></textarea>
                 </div>
-                <div class="d-flex justify-content-center">
+                <div class="submitButton d-flex justify-content-center">
                     <button type="submit" class="btn btn-outline-success mb-3">Submit</button>
+                    
                 </div>
             </form>
         </div>

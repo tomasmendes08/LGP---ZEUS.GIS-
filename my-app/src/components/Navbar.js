@@ -11,8 +11,8 @@ function NavbarComponent() {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="navLinks fs-5 ms-lg-auto ms-2">
-          <Nav.Link href="/contact" className="me-4 text-dark fw-bold">Contact</Nav.Link>
           <Nav.Link href="/about" className="me-4 text-dark fw-bold">About</Nav.Link>
+          <Nav.Link href="/contact" className="me-4 text-dark fw-bold">Contact</Nav.Link>
           <Nav.Link href="/products" className="me-4 text-dark fw-bold">Products</Nav.Link>
         </Nav>
       </Navbar.Collapse>

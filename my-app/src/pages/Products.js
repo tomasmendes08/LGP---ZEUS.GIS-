@@ -10,56 +10,56 @@ function ProductsPage() {
     <>
     <NavbarComponent/>
     <div className="productsPage">
-        <div class="productsPageHeader d-flex justify-content-center">
-          <h1 class="fw-bold mt-5">
+        <div className="productsPageHeader d-flex justify-content-center">
+          <h1 className="fw-bold mt-5">
               Upcoming Product 
           </h1>
         </div>
         {/* video */}
-        <div class="mainFeatures mt-4">
-          <div class="featuresHeader d-flex justify-content-center">
-            <h2 class="fw-bold">
+        <div className="mainFeatures mt-4">
+          <div className="featuresHeader d-flex justify-content-center">
+            <h2 className="fw-bold">
               Features
             </h2>
           </div>
-          <div class="features row container mx-auto">
-            <div class="firstFeature mt-3 col-md-6 d-flex">
-              <div class="firstFeatureLogo">
+          <div className="features row container mx-auto">
+            <div className="firstFeature mt-3 col-md-6 d-flex">
+              <div className="firstFeatureLogo">
                 <BiStats size={50}/>
               </div>
-              <div class="firstFeatureDescription d-flex justify-content-center align-items-center ms-2">
+              <div className="firstFeatureDescription d-flex justify-content-center align-items-center ms-2">
                 See "historical" statistics about assets' properties
               </div>
             </div>
-            <div class="secondFeature mt-3 col-md-6 d-flex">
-              <div class="secondFeatureLogo">
+            <div className="secondFeature mt-3 col-md-6 d-flex">
+              <div className="secondFeatureLogo">
                 <GiWindTurbine size={50}/>
               </div>
-              <div class="secondFeatureDescription d-flex justify-content-center align-items-center ms-2">
+              <div className="secondFeatureDescription d-flex justify-content-center align-items-center ms-2">
                 Management of assets (wind farms, solar farms, factories)
               </div>
             </div>
-            <div class="thirdFeature mt-3 col-md-6 d-flex">
-              <div class="thirdFeatureLogo">
+            <div className="thirdFeature mt-3 col-md-6 d-flex">
+              <div className="thirdFeatureLogo">
                 <ImStatsBars size={50}/>
               </div>
-              <div class="thirdFeatureDescription d-flex justify-content-center align-items-center ms-2">
+              <div className="thirdFeatureDescription d-flex justify-content-center align-items-center ms-2">
                 See predictions about energy needs, production and price
               </div>
             </div>
-            <div class="fourthFeature mt-3 col-md-6 d-flex">
-              <div class="fourthFeatureLogo">
+            <div className="fourthFeature mt-3 col-md-6 d-flex">
+              <div className="fourthFeatureLogo">
                 <AiOutlineNodeIndex size={50}/>
               </div>
-              <div class="fourthFeatureDescription d-flex justify-content-center align-items-center ms-2">
+              <div className="fourthFeatureDescription d-flex justify-content-center align-items-center ms-2">
                 Aggregate and connect assets
               </div>
             </div>
-            <div class="fifthFeature mt-3 col-md-6 d-flex">
-              <div class="fifthFeatureLogo">
+            <div className="fifthFeature mt-3 col-md-6 d-flex">
+              <div className="fifthFeatureLogo">
                 <AiFillApi size={50}/>
               </div>
-              <div class="fifthFeatureDescription d-flex justify-content-center align-items-center ms-2">
+              <div className="fifthFeatureDescription d-flex justify-content-center align-items-center ms-2">
                 API for insertion/update of historical assets' data and of predictions.
               </div>
             </div>

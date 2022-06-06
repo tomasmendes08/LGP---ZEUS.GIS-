@@ -105,3 +105,11 @@ body {
     padding-top: 60px;
 }
 
+.toastAlert{
+    padding-top: 95px;
+}
+
+.toastAlertTitle{
+    color: #016938;
+}
+

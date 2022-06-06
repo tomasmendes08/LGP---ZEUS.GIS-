@@ -1,10 +1,14 @@
-import NavbarComponent from '../components/Navbar'
+import { useState } from 'react';
+import { Toast, ToastContainer } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
+import NavbarComponent from '../components/Navbar';
 
 function Mainpage(){
-    let search = window.location.search;
-    let params = new URLSearchParams(search);
-    let contact = params.get('contact');
-    // console.log(contact);
+    const location = useLocation();
+    let message = location?.state?.message;
+    // console.log(message);
+    const [aux, setAux] = useState(true);
+
     return (
         <>
             <NavbarComponent/>
@@ -14,10 +18,21 @@ function Mainpage(){
                         Keep energy moving.
                     </div>
                     <div className = "d-flex justify-content-start mt-3">
-                        <a href="/contact" class="btn btn-success w-lg-25 p-3 fs-5">Get in Touch</a>
+                        <a href="/contact" className="btn btn-success w-lg-25 p-3 fs-5">Get in Touch</a>
                     </div>
                 </div>
             </div>
+            {
+                message && 
+                <ToastContainer className="toastAlert container" position="top-end">
+                    <Toast show={aux} onClose={() => setAux(false)}>
+                        <Toast.Header>
+                            <strong className="toastAlertTitle me-auto">Message</strong>
+                        </Toast.Header>
+                        <Toast.Body>{message}</Toast.Body>
+                    </Toast>
+                </ToastContainer>
+            }
         </>
     );
 }

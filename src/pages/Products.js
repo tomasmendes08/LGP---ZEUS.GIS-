@@ -10,13 +10,16 @@ function ProductsPage() {
     <>
     <NavbarComponent/>
     <div className="productsPage">
-        <div className="productsPageHeader d-flex justify-content-center">
+        <div className="productsPageHeader d-flex flex-column justify-content-center align-items-center">
           <h1 className="fw-bold mt-5">
               Upcoming Product 
           </h1>
+          <div className="productPageLink">
+            <h4 className="mt-3">Check it out: <a href="http://app.zeus-gis.pt/" className='link-dark'>Electrica Imperium</a></h4>
+          </div>
         </div>
         {/* video */}
-        <div className="mainFeatures mt-4">
+        <div className="mainFeatures mt-5">
           <div className="featuresHeader d-flex justify-content-center">
             <h2 className="fw-bold">
               Features
